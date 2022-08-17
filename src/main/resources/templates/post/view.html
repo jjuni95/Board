@@ -87,14 +87,12 @@
     		 //타임리프는 '<', '>'태그를 엄격하게 검사하기때문에 자바스크립트 코드는 꼭 CDATA로 묶어줘야한다. CDATA => 특수문자를 전부 문자열로 치환할때 사용
     		 //게시글 삭제
     		 function deletePost(){
-    			const index = [[ ${index} ]];
-    			if ( !confirm(index + "번 게시글을 삭제할까요?") ) {
+    			const id = [[ ${post.id} ]];
+    			if ( !confirm(id + "번 게시글을 삭제할까요?") ) {
     				return false;
     			}
     			
-    			return false;
     		 	
-    		 	const id= [[ ${post.id} ]];
     		 	const formHtml = `
     		 		<form id="deleteForm" action="/post/delete.do" method="post">
     		 			<input type="hidden" id="id" name="id" value="${id}" />
@@ -110,4 +108,7 @@
     	</script>
     
     </th:block>
+    
+    
 </html>
+
