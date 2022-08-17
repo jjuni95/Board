@@ -79,7 +79,8 @@
         WHERE
             delete_yn = 0
         ORDER BY
-            id DESC
+              notice_yn DESC
+            , id DESC
     </select>
 
 </mapper>

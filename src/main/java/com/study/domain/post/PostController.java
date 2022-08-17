@@ -45,9 +45,10 @@ public class PostController {
 
     // 게시글 상세 페이지
     @GetMapping("/post/view.do")
-    public String openPostView(@RequestParam final Long id, Model model) {
+    public String openPostView(@RequestParam final Long id, @RequestParam final Long index, Model model) {
         PostResponse post = postService.findPostById(id);
         model.addAttribute("post", post);
+        model.addAttribute("index", index);
         return "post/view";
     }
 

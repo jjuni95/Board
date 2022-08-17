@@ -26,7 +26,7 @@
                 <tbody>
                     <tr th:if="${not #lists.isEmpty( posts )}" th:each="row, status : ${posts}">
                         <td th:text="${row.noticeYn == true ? '공지' : status.size - status.index}"></td>
-                        <td class="text-left"><a th:href="@{/post/view.do( id=${row.id} )}" th:text="${row.title}"></a></td>
+                        <td class="text-left"><a th:href="@{/post/view.do( id=${row.id}, index=${status.size - status.index} )}" th:text="${row.title}"></a></td>
                         <td th:text="${row.writer}"></td>
                         <td th:text="${#temporals.format( row.createdDate, 'yyyy-MM-dd HH:mm:ss' )}"></td>
                         <td th:text="${row.viewCnt}"></td>

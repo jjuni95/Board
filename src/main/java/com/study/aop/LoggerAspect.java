@@ -25,7 +25,7 @@ public class LoggerAspect {
 			 type = "Mapper ===> ";
 		 }
 		 
-		 log.debug(type + name          + "."+ joinPoint.getSignature().getName() + "()");
+		 log.debug(type + name + "."+ joinPoint.getSignature().getName() + "()");
 		 return joinPoint.proceed();
 	 }
 }
