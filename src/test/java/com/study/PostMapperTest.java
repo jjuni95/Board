@@ -51,8 +51,8 @@ public class PostMapperTest {
     	//1. 게시글 수정
     	PostRequest params = new PostRequest();
     	params.setId(1L);
-    	params.setTitle("1번 게시글 제목 수정");
-    	params.setContent("1번 게시글 내용 수정");
+    	params.setTitle("수정본 1번 게시글 제목 수정");
+    	params.setContent("수정본 1번 게시글 내용 수정");
     	params.setWriter("준희");
     	params.setNoticeYn(true);
     	postMapper.update(params);

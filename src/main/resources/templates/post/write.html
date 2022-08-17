@@ -8,7 +8,7 @@
     	<div class="card-content">
     		<form id="saveForm" class="form-horizontal" method="post" autocomplete="off">
     			<!-- 기존 게시글 수정인 경우, 서버로 전달할 게시글 번호(id) -->
-    			<input type="hidden" id="id" th:if="${post != null}" th:value="${post.id}"/>
+    			<input type="hidden" id="id" name="id" th:if="${post != null}" th:value="${post.id}"/>
     			<!-- 서버로 전달할 공지 여부 -->
     			<input type="hidden" id="noticeYn" name="noticeYn"/>
     			
